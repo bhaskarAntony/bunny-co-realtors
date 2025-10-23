@@ -71,7 +71,7 @@ const AboutSection = () => {
           </div>
 
           {/* Right Image */}
-          <div className="flex-1 relative">
+          <div className="flex-1 relative w-full">
             <img
               src={image}
               alt="Mumbai properties"

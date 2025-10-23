@@ -4,7 +4,7 @@ const StatsSection = () => {
   const stats = [
     {
       icon: TrendingUp,
-      number: "₹100Cr+",
+      number: "₹50Cr+",
       label: "Properties Sold",
       description: "Total value of premium properties successfully transacted"
     },
@@ -16,13 +16,13 @@ const StatsSection = () => {
     },
     {
       icon: Home,
-      number: "750+",
+      number: "20+",
       label: "Projects Completed",
       description: "Successful property deals from start to finish"
     },
     {
       icon: Award,
-      number: "15+",
+      number: "9+",
       label: "Years Experience",
       description: "Trusted expertise in Mumbai real estate market"
     }
@@ -93,9 +93,9 @@ const StatsSection = () => {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <div className="inline-flex items-center gap-4 bg-black/40 backdrop-blur-sm rounded-2xl px-8 py-4 border border-emerald-500/20">
+          <div className=" lg:inline-flex items-center gap-4 bg-black/40 backdrop-blur-sm rounded-2xl px-8 py-4 border border-emerald-500/20">
             <span className="text-emerald-300 font-medium">Join thousands of satisfied clients</span>
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg">
+            <button className="bg-emerald-600 mt-10 md:mt-0 hover:bg-emerald-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg">
               Start Your Journey
             </button>
           </div>

@@ -35,7 +35,7 @@ const HeroSection = () => {
         <div className="mb-6 lg:mb-10 inline-flex items-center gap-3 px-6 py-3 bg-white/5 backdrop-blur-md rounded-lg border border-white/10 shadow-lg mt-10">
           <ShieldCheck className="w-4 h-4 text-emerald-400 flex-shrink-0" />
           <span className="text-emerald-300 text-sm font-medium uppercase tracking-wide">
-            RERA Certified • 15+ Years Excellence
+            RERA Certified • 9+ Years Excellence
           </span>
         </div>
 
@@ -94,24 +94,24 @@ const HeroSection = () => {
         <div className="flex flex-wrap justify-center gap-8 lg:gap-12 text-sm lg:text-base mb-8">
           <div className="flex items-center gap-2 text-emerald-400">
             <Star className="w-5 h-5" />
-            <span className="font-semibold">₹100Cr+</span>
+            <span className="font-semibold">₹50Cr+</span>
             <span className="text-gray-400">Properties Sold</span>
           </div>
           <div className="flex items-center gap-2 text-emerald-400">
             <Award className="w-5 h-5" />
-            <span className="font-semibold">1000+</span>
+            <span className="font-semibold">1200+</span>
             <span className="text-gray-400">Happy Clients</span>
           </div>
           <div className="flex items-center gap-2 text-emerald-400">
             <ShieldCheck className="w-5 h-5" />
-            <span className="font-semibold">15+</span>
+            <span className="font-semibold">9+</span>
             <span className="text-gray-400">Years Experience</span>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10 animate-bounce">
+      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10 animate-bounce">
         <button
           onClick={() => scrollToSection('about')}
           className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:border-emerald-400/50 transition-colors duration-300 hover:bg-white/20"
@@ -120,7 +120,7 @@ const HeroSection = () => {
           <ChevronDown className="w-5 h-5 text-white" />
         </button>
         <span className="text-xs text-gray-400 mt-2 font-medium tracking-wide">Discover More</span>
-      </div>
+      </div> */}
 
       {/* Decorative Elements */}
       <div className="absolute top-20 left-10 w-32 h-32 lg:w-48 lg:h-48 bg-emerald-500/5 rounded-full blur-xl border border-emerald-400/10 animate-pulse"></div>

@@ -135,7 +135,7 @@ const Footer = () => {
                 <MapPin className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                 <div>
                   <div>Mumbai, Maharashtra</div>
-                  <div>400001</div>
+                  <div>400064</div>
                 </div>
               </div>
               
@@ -146,7 +146,7 @@ const Footer = () => {
               
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-emerald-400" />
-                <div>info@bunnyrealtors.com</div>
+                <div>bunnyandco.realtors@gmail.com</div>
               </div>
             </div>
 

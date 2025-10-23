@@ -35,7 +35,7 @@ const ContactSection = () => {
     
     try {
       // Initialize EmailJS (you'll need to get these from EmailJS dashboard)
-      emailjs.init("cGpvff6n-fBmjbhEk"); // Replace with your EmailJS public key
+      emailjs.init("7ogPXMKfFPMLlyri8"); // Replace with your EmailJS public key
       
       const templateParams = {
         to_email: 'bhaskarbabucm6@gmail.com',
@@ -48,8 +48,8 @@ const ContactSection = () => {
       };
 
       await emailjs.send(
-        'service_vrldpis', // Replace with your EmailJS service ID
-        'template_dfuuzzs', // Replace with your EmailJS template ID
+        'service_3krkqnm', // Replace with your EmailJS service ID
+        'template_vddatgd', // Replace with your EmailJS template ID
         templateParams
       );
       
@@ -91,7 +91,7 @@ const ContactSection = () => {
         <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-teal-200 rounded-full blur-2xl opacity-20 animate-bounce"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-3 sm:px-8 lg:px-12 relative z-10">
         <div className="text-center mb-16 lg:mb-20">
           <div className="inline-flex items-center px-6 py-3 bg-emerald-100 rounded-full text-emerald-800 font-medium mb-8 animate-fade-in">
             📞 Get in Touch
@@ -109,7 +109,7 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Contact Form */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-10 shadow-xl border border-white/50 animate-slide-left">
+          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-4 py-10 lg:p-10 shadow-xl border border-white/50 animate-slide-left">
             <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-8">Send us a message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -235,7 +235,7 @@ const ContactSection = () => {
           {/* Contact Information */}
           <div className="space-y-8 animate-slide-right">
             {/* Contact Details */}
-            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-white/50 hover:bg-white/80 transition-all duration-300">
+            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 py-10 border border-white/50 hover:bg-white/80 transition-all duration-300">
               <h3 className="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
               
               <div className="space-y-6">
@@ -246,7 +246,7 @@ const ContactSection = () => {
                   <div>
                     <div className="font-medium text-gray-900 text-lg">Office Address</div>
                     <div className="text-gray-600">Mumbai, Maharashtra</div>
-                    <div className="text-gray-600">400001</div>
+                    <div className="text-gray-600">400064</div>
                   </div>
                 </div>
                 
@@ -266,8 +266,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="font-medium text-gray-900 text-lg">Email Address</div>
-                    <div className="text-gray-600">info@bunnyrealtors.com</div>
-                    <div className="text-gray-600">sales@bunnyrealtors.com</div>
+                    <div className="text-gray-600">bunnyandco.realtors@gmail.com</div>
                   </div>
                 </div>
                 
@@ -304,12 +303,8 @@ const ContactSection = () => {
             </div>
 
             {/* Map Placeholder */}
-            <div className="bg-gray-200 rounded-2xl h-64 flex items-center justify-center hover:bg-gray-300 transition-colors duration-300">
-              <div className="text-center text-gray-500">
-                <MapPin className="w-12 h-12 mx-auto mb-2" />
-                <div className="text-lg font-medium">Office Location Map</div>
-                <div className="text-sm">Interactive map would be embedded here</div>
-              </div>
+            <div className="bg-gray-200 rounded-2xl mt-10 h-64 flex items-center justify-center hover:bg-gray-300 transition-colors duration-300">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60292.73391049533!2d72.78325280938184!3d19.182275433830572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b70a9af38905%3A0xe5707242078468a7!2sMalad%20Post%20Office!5e0!3m2!1sen!2sin!4v1761224391037!5m2!1sen!2sin" className='w-full rounded-2xl h-full'  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>

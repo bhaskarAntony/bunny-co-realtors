@@ -154,24 +154,25 @@ const InstagramReelsSection = () => {
   };
 
   return (
-    <section id="instagram" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 relative overflow-hidden">
+    <section id="instagram" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-pink-200 to-purple-200 rounded-full blur-3xl opacity-50"></div>
-      <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-r from-purple-200 to-indigo-200 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+      <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-full blur-3xl opacity-30 animate-pulse" style={{ animationDelay: '1s' }}></div>
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="text-center mb-16 lg:mb-20">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-100 to-purple-100 rounded-full text-pink-800 font-medium mb-8">
-            🎬 From Our Instagram
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-gray-800 to-gray-700 rounded-full text-pink-400 font-medium mb-8 backdrop-blur-sm border border-gray-700/50">
+            <Instagram className="w-5 h-5 mr-2" />
+            <span>From Our Instagram</span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-100 mb-8 tracking-tight">
             Real Stories &
-            <span className="bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent"> Expert Insights</span>
+            <span className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent"> Expert Insights</span>
           </h2>
 
-          <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
-            See real stories, expert advice, and property insights shared by Bunny & Co. Realtors on Instagram. Follow us for quick insights and authentic property walkthroughs.
+          <p className="text-lg lg:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed mb-8">
+            Dive into real stories, expert advice, and property insights from Bunny & Co. Realtors on Instagram. Follow us for exclusive walkthroughs and market tips.
           </p>
         </div>
 
@@ -197,7 +198,7 @@ const InstagramReelsSection = () => {
               return (
                 <div
                   key={reel.id}
-                  className={`absolute inset-0 bg-white rounded-3xl shadow-2xl transition-all duration-500 transform ${
+                  className={`absolute inset-0 bg-gray-800/90 rounded-3xl shadow-2xl transition-all duration-500 transform backdrop-blur-sm border border-gray-700/50 ${
                     isActive
                       ? `translate-x-0 translate-y-0 scale-100 z-30 ${isDragging ? `translate-x-[${dragOffset}px]` : ''}`
                       : isPrev
@@ -221,8 +222,8 @@ const InstagramReelsSection = () => {
                         draggable="false"
                       />
                     ) : (
-                      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                        <span>Loading thumbnail...</span>
+                      <div className="w-full h-full bg-gray-700 flex items-center justify-center">
+                        <span className="text-gray-400">Loading thumbnail...</span>
                       </div>
                     )}
 
@@ -230,8 +231,8 @@ const InstagramReelsSection = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 
                     {/* Content */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                      <h3 className="text-xl font-bold mb-2">{reel.title}</h3>
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-gray-100">
+                      <h3 className="text-xl font-semibold mb-2">{reel.title}</h3>
                       <p className="text-sm opacity-90 mb-4">{reel.description}</p>
 
                       <div className="flex items-center justify-between">
@@ -241,11 +242,11 @@ const InstagramReelsSection = () => {
                             <span className="text-sm">{reel.likes}</span>
                           </button>
                           <button className="flex items-center space-x-1 hover:scale-110 transition-transform">
-                            <MessageCircle className="w-5 h-5" />
+                            <MessageCircle className="w-5 h-5 text-gray-300" />
                             <span className="text-sm">{Math.floor(parseInt(reel.likes) * 0.3)}</span>
                           </button>
                           <button className="hover:scale-110 transition-transform">
-                            <Share2 className="w-5 h-5" />
+                            <Share2 className="w-5 h-5 text-gray-300" />
                           </button>
                         </div>
 
@@ -257,9 +258,9 @@ const InstagramReelsSection = () => {
                     <div className="absolute inset-0 flex items-center justify-center">
                       <button
                         onClick={() => openVideoModal(reel)}
-                        className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 group"
+                        className="w-20 h-20 bg-gray-900/50 backdrop-blur-sm rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 group border border-gray-600/50"
                       >
-                        <Play className="w-8 h-8 text-white ml-1 group-hover:scale-110 transition-transform" />
+                        <Play className="w-8 h-8 text-gray-100 ml-1 group-hover:scale-110 transition-transform" />
                       </button>
                     </div>
                   </div>
@@ -272,7 +273,7 @@ const InstagramReelsSection = () => {
           <div className="absolute top-1/2 -left-16 transform -translate-y-1/2">
             <button
               onClick={prevReel}
-              className="w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 text-gray-600 hover:text-emerald-600"
+              className="w-12 h-12 bg-gray-800/80 backdrop-blur-sm rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 text-gray-300 hover:text-pink-500 border border-gray-700/50"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
@@ -281,7 +282,7 @@ const InstagramReelsSection = () => {
           <div className="absolute top-1/2 -right-16 transform -translate-y-1/2">
             <button
               onClick={nextReel}
-              className="w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 text-gray-600 hover:text-emerald-600"
+              className="w-12 h-12 bg-gray-800/80 backdrop-blur-sm rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 text-gray-300 hover:text-pink-500 border border-gray-700/50"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
@@ -295,32 +296,33 @@ const InstagramReelsSection = () => {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentIndex ? 'bg-emerald-600 w-8' : 'bg-gray-300'
+                index === currentIndex ? 'bg-pink-500 w-8' : 'bg-gray-600'
               }`}
             />
           ))}
         </div>
 
+        {/* Instagram CTA */}
         <div className="text-center">
           <a
             href="https://www.instagram.com/bunny.co_realtors?igsh=aGV1YzVyMmxpbm4w&utm_source=qr"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-10 py-5 rounded-full font-semibold text-lg lg:text-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center space-x-3 bg-gradient-to-r from-pink-600 to-purple-600 text-gray-100 px-10 py-3 rounded-full font-semibold text-lg lg:text-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-pink-500/25"
           >
             <Instagram className="w-6 h-6" />
-            <span>View More on Instagram</span>
+            <span>View More</span>
           </a>
         </div>
       </div>
 
       {/* Video Modal */}
       {showVideoModal && selectedVideo && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4">
-          <div className="relative w-full max-w-4xl aspect-video bg-black rounded-2xl overflow-hidden">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4">
+          <div className="relative w-full max-w-4xl aspect-video bg-gray-900 rounded-2xl overflow-hidden border border-gray-700/50 shadow-xl">
             <button
               onClick={closeVideoModal}
-              className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
+              className="absolute top-4 right-4 z-10 w-10 h-10 bg-gray-800/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-100 hover:bg-gray-700/80 transition-colors border border-gray-600/50"
             >
               <X className="w-6 h-6" />
             </button>
@@ -332,9 +334,9 @@ const InstagramReelsSection = () => {
               className="w-full h-full object-cover"
             />
 
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
-              <h3 className="text-2xl font-bold mb-2">{selectedVideo.title}</h3>
-              <p className="text-gray-200">{selectedVideo.description}</p>
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/80 to-transparent p-6 text-gray-100">
+              <h3 className="text-2xl font-semibold mb-2">{selectedVideo.title}</h3>
+              <p className="text-gray-300">{selectedVideo.description}</p>
             </div>
           </div>
         </div>
