@@ -1,6 +1,100 @@
-import { TrendingUp, Users, Home, Award, Zap, Star } from 'lucide-react';
+import { TrendingUp, Users, Home, Award, Zap, Star, X, CheckCircle, Send } from 'lucide-react';
+import { useState } from 'react';
 
 const StatsSection = () => {
+    const [formData, setFormData] = useState({
+      name: '',
+      email: '',
+      phone: '',
+      location: '',
+      message: ''
+    });
+     const locations = [
+      'Andheri East',
+      'Andheri West', 
+      'Bandra East',
+      'Bandra West',
+      'Thane',
+      'Navi Mumbai',
+      'Powai',
+      'Lower Parel',
+      'Worli',
+      'Juhu',
+      'Other'
+    ];
+  
+    const [showModal, setShowModal] = useState(false);
+      const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [submitError, setSubmitError] = useState('');
+    const scrollToSection = (id) => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
+  
+     const openModal = (image) => {
+      setShowModal(true);
+    };
+  
+    const closeModal = () => {
+      setShowModal(false);
+    };
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      setIsSubmitting(true);
+      setSubmitError('');
+      
+      try {
+        // Initialize EmailJS (you'll need to get these from EmailJS dashboard)
+        emailjs.init("7ogPXMKfFPMLlyri8"); // Replace with your EmailJS public key
+        const templateParams = {
+          // to_email: 'bunnyandco.realtors@gmail.com',
+          to_email: 'worke2339@gmail.com',
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          location: formData.location,
+          message: formData.message,
+          subject: 'New Property Inquiry from Website'
+        };
+  
+        await emailjs.send(
+          'service_3krkqnm', // Replace with your EmailJS service ID
+          'template_vddatgd', // Replace with your EmailJS template ID
+          templateParams
+        );
+        
+        setIsSubmitting(false);
+        setIsSubmitted(true);
+        
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            location: '',
+            message: ''
+          });
+        }, 3000);
+        
+      } catch (error) {
+        console.error('Email send failed:', error);
+        setIsSubmitting(false);
+        setSubmitError('Failed to send message. Please try again or contact us directly.');
+      }
+    };
+  
+    const handleChange = (e) => {
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value
+      });
+    };
   const stats = [
     {
       icon: TrendingUp,
@@ -95,12 +189,139 @@ const StatsSection = () => {
         <div className="text-center mt-12">
           <div className=" lg:inline-flex items-center gap-4 bg-black/40 backdrop-blur-sm rounded-2xl px-8 py-4 border border-violet-500/20">
             <span className="text-violet-300 font-medium">Join thousands of satisfied clients</span>
-            <button className="bg-violet-600 mt-10 md:mt-0 hover:bg-violet-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg">
+            <button className="bg-violet-600 mt-10 md:mt-0 hover:bg-violet-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg" onClick={openModal}>
               Start Your Journey
             </button>
           </div>
         </div>
       </div>
+
+      {showModal && (
+        /* ── Backdrop ── */
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 overflow-y-auto"
+          onClick={closeModal}
+        >
+          {/* ── Modal Card ── */}
+          <div
+            className="relative my-8 w-full max-w-md bg-white rounded-2xl p-6 sm:p-8 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition"
+              aria-label="Close"
+            >
+              <X className="h-5 w-5 text-gray-600" />
+            </button>
+      
+            {/* Title */}
+            <h3 className="mb-2 text-2xl font-bold text-gray-900">Book Free Consultation</h3>
+            <p className="mb-6 text-sm text-gray-600">Get expert advice in under 2 minutes</p>
+      
+            {/* ── Form ── */}
+            <form onSubmit={handleSubmit} className="space-y-4">
+      
+              {/* Full Name */}
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Full Name *"
+                required
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition focus:border-violet-500 focus:ring-2 focus:ring-violet-500"
+              />
+      
+              {/* Email */}
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email Address *"
+                required
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition focus:border-violet-500 focus:ring-2 focus:ring-violet-500"
+              />
+      
+              {/* Phone */}
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Phone Number *"
+                required
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition focus:border-violet-500 focus:ring-2 focus:ring-violet-500"
+              />
+      
+              {/* Location */}
+              <select
+                name="location"
+                value={formData.location}
+                onChange={handleChange}
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition focus:border-violet-500 focus:ring-2 focus:ring-violet-500"
+              >
+                <option value="">Preferred Location</option>
+                {locations.map((loc) => (
+                  <option key={loc} value={loc}>{loc}</option>
+                ))}
+              </select>
+      
+              {/* Message */}
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                rows={3}
+                placeholder="Message / Requirements"
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition focus:border-violet-500 focus:ring-2 focus:ring-violet-500 resize-none"
+              />
+      
+              {/* Error */}
+              {submitError && (
+                <p className="rounded bg-red-50 p-2 text-xs text-red-600">{submitError}</p>
+              )}
+      
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={isSubmitting || isSubmitted}
+                className={`flex w-full items-center justify-center gap-2 rounded-lg py-3 font-semibold text-white transition-all duration-300 ${
+                  isSubmitted
+                    ? 'bg-green-600'
+                    : isSubmitting
+                    ? 'bg-violet-400 cursor-not-allowed'
+                    : 'bg-gradient-to-r from-violet-600 to-teal-600 hover:from-violet-700 hover:to-teal-700 shadow-lg hover:shadow-xl transform hover:scale-[1.02]'
+                }`}
+              >
+                {isSubmitted ? (
+                  <>
+                    <CheckCircle className="h-5 w-5" />
+                    Sent!
+                  </>
+                ) : isSubmitting ? (
+                  <>
+                    <div className="h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="h-5 w-5" />
+                    Request Callback
+                  </>
+                )}
+              </button>
+            </form>
+      
+            {/* Footer Text */}
+            <p className="mt-4 text-center text-xs text-gray-500">
+              We’ll call you within <strong>5 minutes</strong>
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

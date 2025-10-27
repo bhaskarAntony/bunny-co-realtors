@@ -21,7 +21,7 @@ const Footer = () => {
               Redefining real estate with trust, transparency, and expertise. Your trusted partner for premium properties in Mumbai.
             </p>
             
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <a
                 href="https://instagram.com/bunnyandcorealtors"
                 target="_blank"
@@ -54,7 +54,7 @@ const Footer = () => {
               >
                 <MessageCircle className="w-5 h-5" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -157,22 +157,12 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+          <div className="flex flex-col lg:flex-row justify-center items-center space-y-4 lg:space-y-0">
             <div className="text-gray-400 text-sm">
               Copyright © 2025 Bunny & Co. Realtors. All rights reserved.
             </div>
             
-            <div className="flex space-x-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-violet-400 transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="hover:text-violet-400 transition-colors">
-                Terms & Conditions
-              </a>
-              <a href="#" className="hover:text-violet-400 transition-colors">
-                Disclaimer
-              </a>
-            </div>
+           
           </div>
         </div>
       </div>

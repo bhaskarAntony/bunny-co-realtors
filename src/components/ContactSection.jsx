@@ -93,9 +93,16 @@ const ContactSection = () => {
 
       <div className="max-w-7xl mx-auto px-3 sm:px-8 lg:px-12 relative z-10">
         <div className="text-center mb-16 lg:mb-20">
-          <div className="inline-flex items-center px-6 py-3 bg-violet-100 rounded-full text-violet-800 font-medium mb-8 animate-fade-in">
+
+           <a
+          href="tel:+919082989628"
+         
+        >
+         <div className="inline-flex items-center px-6 py-3 bg-violet-100 rounded-full text-violet-800 font-medium mb-8 animate-fade-in">
             📞 Get in Touch
           </div>
+        </a>
+         
           
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 animate-slide-up">
             Let's Find Your Perfect
@@ -112,124 +119,99 @@ const ContactSection = () => {
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-4 py-10 lg:p-10 shadow-xl border border-white/50 animate-slide-left">
             <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-8">Send us a message</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div className="animate-fade-in">
-                  <label className="block text-sm font-medium text-gray-700 mb-3">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all duration-300 text-lg"
-                    placeholder="Your full name"
-                  />
-                </div>
-                
-                <div className="animate-fade-in delay-100">
-                  <label className="block text-sm font-medium text-gray-700 mb-3">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all duration-300 text-lg"
-                    placeholder="your@email.com"
-                  />
-                </div>
-              </div>
-              
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div className="animate-fade-in delay-200">
-                  <label className="block text-sm font-medium text-gray-700 mb-3">
-                    Phone Number *
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all duration-300 text-lg"
-                    placeholder="+91 98765 43210"
-                  />
-                </div>
-                
-                <div className="animate-fade-in delay-300">
-                  <label className="block text-sm font-medium text-gray-700 mb-3">
-                    Preferred Location
-                  </label>
-                  <select
-                    name="location"
-                    value={formData.location}
-                    onChange={handleChange}
-                    className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all duration-300 text-lg"
-                  >
-                    <option value="">Select location</option>
-                    {locations.map((location) => (
-                      <option key={location} value={location}>
-                        {location}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-              
-              <div className="animate-fade-in delay-400">
-                <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Message / Requirements
-                </label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5}
-                  className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all duration-300 resize-none text-lg"
-                  placeholder="Tell us about your property requirements, budget, timeline, etc."
-                />
-              </div>
-              
-              {submitError && (
-                <div className="text-red-600 text-sm bg-red-50 p-4 rounded-lg">
-                  {submitError}
-                </div>
-              )}
-              
-              <button
-                type="submit"
-                disabled={isSubmitting || isSubmitted}
-                className={`w-full py-5 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-3 ${
-                  isSubmitted 
-                    ? 'bg-violet-600 text-white' 
-                    : isSubmitting
-                    ? 'bg-violet-400 text-white cursor-not-allowed'
-                    : 'bg-violet-600 hover:bg-violet-700 text-white transform hover:scale-105 shadow-lg hover:shadow-xl'
-                }`}
-              >
-                {isSubmitted ? (
-                  <>
-                    <CheckCircle className="w-6 h-6" />
-                    <span>Message Sent Successfully!</span>
-                  </>
-                ) : isSubmitting ? (
-                  <>
-                    <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                    <span>Sending Message...</span>
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-6 h-6" />
-                    <span>Request a Call Back</span>
-                  </>
-                )}
-              </button>
-            </form>
+           <form onSubmit={handleSubmit} className="space-y-4">
+
+        {/* Full Name */}
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          placeholder="Full Name *"
+          required
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition focus:border-violet-500 focus:ring-2 focus:ring-violet-500"
+        />
+
+        {/* Email */}
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder="Email Address *"
+          required
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition focus:border-violet-500 focus:ring-2 focus:ring-violet-500"
+        />
+
+        {/* Phone */}
+        <input
+          type="tel"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          placeholder="Phone Number *"
+          required
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition focus:border-violet-500 focus:ring-2 focus:ring-violet-500"
+        />
+
+        {/* Location */}
+        <select
+          name="location"
+          value={formData.location}
+          onChange={handleChange}
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition focus:border-violet-500 focus:ring-2 focus:ring-violet-500"
+        >
+          <option value="">Preferred Location</option>
+          {locations.map((loc) => (
+            <option key={loc} value={loc}>{loc}</option>
+          ))}
+        </select>
+
+        {/* Message */}
+        <textarea
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          rows={3}
+          placeholder="Message / Requirements"
+          className="w-full rounded-lg border border-gray-300 px-4 py-3 text-sm transition focus:border-violet-500 focus:ring-2 focus:ring-violet-500 resize-none"
+        />
+
+        {/* Error */}
+        {submitError && (
+          <p className="rounded bg-red-50 p-2 text-xs text-red-600">{submitError}</p>
+        )}
+
+        {/* Submit Button */}
+        <button
+          type="submit"
+          disabled={isSubmitting || isSubmitted}
+          className={`flex w-full items-center justify-center gap-2 rounded-lg py-3 font-semibold text-white transition-all duration-300 ${
+            isSubmitted
+              ? 'bg-green-600'
+              : isSubmitting
+              ? 'bg-violet-400 cursor-not-allowed'
+              : 'bg-gradient-to-r from-violet-600 to-teal-600 hover:from-violet-700 hover:to-teal-700 shadow-lg hover:shadow-xl transform hover:scale-[1.02]'
+          }`}
+        >
+          {isSubmitted ? (
+            <>
+              <CheckCircle className="h-5 w-5" />
+              Sent!
+            </>
+          ) : isSubmitting ? (
+            <>
+              <div className="h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
+              Sending...
+            </>
+          ) : (
+            <>
+              <Send className="h-5 w-5" />
+              Request Callback
+            </>
+          )}
+        </button>
+      </form>
           </div>
 
           {/* Contact Information */}
@@ -244,9 +226,9 @@ const ContactSection = () => {
                     <MapPin className="w-6 h-6 text-violet-600" />
                   </div>
                   <div>
-                    <div className="font-medium text-gray-900 text-lg">Office Address</div>
-                    <div className="text-gray-600">Mumbai, Maharashtra</div>
-                    <div className="text-gray-600">400064</div>
+                    <div className="font-medium text-gray-900 text-md">Office Address</div>
+                    <div className="text-gray-600 text-sm">Mumbai, Maharashtra</div>
+                    <div className="text-gray-600 text-sm">400064</div>
                   </div>
                 </div>
                 
@@ -254,9 +236,9 @@ const ContactSection = () => {
                   <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <Phone className="w-6 h-6 text-blue-600" />
                   </div>                 <div>
-                    <div className="font-medium text-gray-900 text-lg">Phone Number</div>
-                    <div className="text-gray-600">+91 90829 89628 </div>
-                    <div className="text-gray-600">+91 91365 46143 </div>
+                    <div className="font-medium text-gray-900 text-md">Phone Number</div>
+                    <div className="text-gray-600 text-sm">+91 90829 89628 </div>
+                    <div className="text-gray-600 text-sm">+91 91365 46143 </div>
                   </div>
                 </div>
                 
@@ -265,8 +247,8 @@ const ContactSection = () => {
                     <Mail className="w-6 h-6 text-purple-600" />
                   </div>
                   <div>
-                    <div className="font-medium text-gray-900 text-lg">Email Address</div>
-                    <div className="text-gray-600">bunnyandco.realtors@gmail.com</div>
+                    <div className="font-medium text-gray-900 text-md">Email Address</div>
+                    <div className="text-gray-600 text-sm">bunnyandco.realtors@gmail.com</div>
                   </div>
                 </div>
                 
@@ -275,16 +257,24 @@ const ContactSection = () => {
                     <Clock className="w-6 h-6 text-violet-600" />
                   </div>
                   <div>
-                    <div className="font-medium text-gray-900 text-lg">Business Hours</div>
-                    <div className="text-gray-600">Mon - Sat: 9:00 AM - 8:00 PM</div>
-                    <div className="text-gray-600">Sun: 10:00 AM - 6:00 PM</div>
+                    <div className="font-medium text-gray-900 text-md">Business Hours</div>
+                    <div className="text-gray-600 text-sm">Mon - Sat: 9:00 AM - 8:00 PM</div>
+                    <div className="text-gray-600 text-sm">Sun: 10:00 AM - 6:00 PM</div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* WhatsApp CTA */}
-            <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-8 text-white hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105">
+
+          
+
+          </div>
+        </div>
+
+          <div className="grid md:grid-cols-2 items-center gap-12 mt-10">
+
+            <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-8 text-white hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105" style={{height:"fit-content"}}>
               <div className="flex items-center space-x-4 mb-6">
                 <MessageCircle className="w-10 h-10" />
                 <div>
@@ -306,8 +296,8 @@ const ContactSection = () => {
             <div className="bg-gray-200 rounded-2xl mt-10 h-64 flex items-center justify-center hover:bg-gray-300 transition-colors duration-300">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60292.73391049533!2d72.78325280938184!3d19.182275433830572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b70a9af38905%3A0xe5707242078468a7!2sMalad%20Post%20Office!5e0!3m2!1sen!2sin!4v1761224391037!5m2!1sen!2sin" className='w-full rounded-2xl h-full'  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-          </div>
-        </div>
+
+            </div>
       </div>
     </section>
   );
