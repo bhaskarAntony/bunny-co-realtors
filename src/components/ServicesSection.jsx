@@ -14,12 +14,12 @@ const ServicesSection = () => {
       description: "Expert guidance to find your perfect home with personalized recommendations",
       features: ["500+ successful consultations", "Market trend analysis", "Lifestyle matching"],
       stats: "500+ Clients",
-      color: "bg-emerald-100/70",
-      hoverColor: "hover:bg-emerald-200/80",
-      textColor: "text-emerald-900",
-       iconBgColor: "bg-emerald-900",
-      borderColor: "border-emerald-200/50",
-      glowColor: "bg-emerald-300/30"
+      color: "bg-violet-100/70",
+      hoverColor: "hover:bg-violet-200/80",
+      textColor: "text-violet-900",
+       iconBgColor: "bg-violet-900",
+      borderColor: "border-violet-200/50",
+      glowColor: "bg-violet-300/30"
     },
     {
       icon: Building2,
@@ -115,10 +115,10 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-emerald-50">
+    <section id="services" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-violet-50">
       {/* Background Pattern */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-48 h-48 bg-emerald-100/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-10 left-10 w-48 h-48 bg-violet-100/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-10 right-10 w-64 h-64 bg-blue-100/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
         <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-purple-100/20 rounded-full blur-2xl animate-pulse" style={{animationDelay: '3s'}}></div>
       </div>
@@ -126,14 +126,14 @@ const ServicesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         {/* Header */}
         <div className="text-center mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full text-emerald-700 font-semibold mb-8 border border-emerald-100/50 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full text-violet-700 font-semibold mb-8 border border-violet-100/50 shadow-sm">
             <Star className="w-5 h-5" />
             <span>Premium Real Estate Services</span>
           </div>
           
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
             Comprehensive Real Estate 
-            <span className="text-emerald-600 block">Solutions</span>
+            <span className="text-violet-600 block">Solutions</span>
           </h2>
           
           <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed opacity-90">

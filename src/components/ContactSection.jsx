@@ -83,23 +83,23 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 relative overflow-hidden">
+    <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-violet-50 via-violet-50 to-teal-50 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-emerald-200 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-green-200 rounded-full blur-3xl opacity-30 animate-pulse delay-1000"></div>
+        <div className="absolute top-20 left-20 w-32 h-32 bg-violet-200 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-violet-200 rounded-full blur-3xl opacity-30 animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-teal-200 rounded-full blur-2xl opacity-20 animate-bounce"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-3 sm:px-8 lg:px-12 relative z-10">
         <div className="text-center mb-16 lg:mb-20">
-          <div className="inline-flex items-center px-6 py-3 bg-emerald-100 rounded-full text-emerald-800 font-medium mb-8 animate-fade-in">
+          <div className="inline-flex items-center px-6 py-3 bg-violet-100 rounded-full text-violet-800 font-medium mb-8 animate-fade-in">
             📞 Get in Touch
           </div>
           
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 animate-slide-up">
             Let's Find Your Perfect
-            <span className="text-emerald-600"> Property Together</span>
+            <span className="text-violet-600"> Property Together</span>
           </h2>
           
           <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed animate-fade-in-delay">
@@ -124,7 +124,7 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300 text-lg"
+                    className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all duration-300 text-lg"
                     placeholder="Your full name"
                   />
                 </div>
@@ -139,7 +139,7 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300 text-lg"
+                    className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all duration-300 text-lg"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -156,7 +156,7 @@ const ContactSection = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300 text-lg"
+                    className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all duration-300 text-lg"
                     placeholder="+91 98765 43210"
                   />
                 </div>
@@ -169,7 +169,7 @@ const ContactSection = () => {
                     name="location"
                     value={formData.location}
                     onChange={handleChange}
-                    className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300 text-lg"
+                    className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all duration-300 text-lg"
                   >
                     <option value="">Select location</option>
                     {locations.map((location) => (
@@ -190,7 +190,7 @@ const ContactSection = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all duration-300 resize-none text-lg"
+                  className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition-all duration-300 resize-none text-lg"
                   placeholder="Tell us about your property requirements, budget, timeline, etc."
                 />
               </div>
@@ -206,10 +206,10 @@ const ContactSection = () => {
                 disabled={isSubmitting || isSubmitted}
                 className={`w-full py-5 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-3 ${
                   isSubmitted 
-                    ? 'bg-green-600 text-white' 
+                    ? 'bg-violet-600 text-white' 
                     : isSubmitting
-                    ? 'bg-emerald-400 text-white cursor-not-allowed'
-                    : 'bg-emerald-600 hover:bg-emerald-700 text-white transform hover:scale-105 shadow-lg hover:shadow-xl'
+                    ? 'bg-violet-400 text-white cursor-not-allowed'
+                    : 'bg-violet-600 hover:bg-violet-700 text-white transform hover:scale-105 shadow-lg hover:shadow-xl'
                 }`}
               >
                 {isSubmitted ? (
@@ -240,8 +240,8 @@ const ContactSection = () => {
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4 group">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <MapPin className="w-6 h-6 text-emerald-600" />
+                  <div className="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <MapPin className="w-6 h-6 text-violet-600" />
                   </div>
                   <div>
                     <div className="font-medium text-gray-900 text-lg">Office Address</div>
@@ -271,8 +271,8 @@ const ContactSection = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4 group">
-                  <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Clock className="w-6 h-6 text-green-600" />
+                  <div className="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Clock className="w-6 h-6 text-violet-600" />
                   </div>
                   <div>
                     <div className="font-medium text-gray-900 text-lg">Business Hours</div>
@@ -296,7 +296,7 @@ const ContactSection = () => {
                 href="https://wa.me/919876543210?text=Hi, I'm interested in buying a property."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-white text-green-600 py-4 rounded-xl font-semibold text-center hover:bg-gray-100 transition-colors text-lg"
+                className="block w-full bg-white text-gray-900 py-4 rounded-xl font-semibold text-center hover:bg-gray-100 transition-colors text-lg"
               >
                 Start WhatsApp Chat
               </a>

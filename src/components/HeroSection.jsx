@@ -33,8 +33,8 @@ const HeroSection = () => {
         
         {/* Trust Badge */}
         <div className="mb-6 lg:mb-10 inline-flex items-center gap-3 px-6 py-3 bg-white/5 backdrop-blur-md rounded-lg border border-white/10 shadow-lg mt-10">
-          <ShieldCheck className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-          <span className="text-emerald-300 text-sm font-medium uppercase tracking-wide">
+          <ShieldCheck className="w-4 h-4 text-violet-400 flex-shrink-0" />
+          <span className="text-violet-300 text-sm font-medium uppercase tracking-wide">
             RERA Certified • 9+ Years Excellence
           </span>
         </div>
@@ -42,7 +42,7 @@ const HeroSection = () => {
         {/* Hero Title */}
         <h1 className="mb-6 lg:mb-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight tracking-tight">
           Mumbai's Premier
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-500 mt-4">
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-teal-400 to-violet-500 mt-4">
             Real Estate Partner
           </span>
         </h1>
@@ -50,7 +50,7 @@ const HeroSection = () => {
         {/* Hero Description */}
         <p className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 lg:mb-12 max-w-4xl mx-auto leading-relaxed font-light">
           Discover premium residential and commercial properties with expert guidance and{' '}
-          <span className="text-emerald-300 font-semibold">zero brokerage</span> on new projects
+          <span className="text-violet-300 font-semibold">zero brokerage</span> on new projects
         </p>
 
         {/* Key Benefits Grid */}
@@ -63,7 +63,7 @@ const HeroSection = () => {
             const IconComponent = benefit.icon;
             return (
               <div key={index} className="flex items-center gap-3 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-                <IconComponent className="w-6 h-6 text-emerald-400 flex-shrink-0" />
+                <IconComponent className="w-6 h-6 text-violet-400 flex-shrink-0" />
                 <div>
                   <div className="font-semibold text-white text-sm">{benefit.label}</div>
                   <div className="text-gray-400 text-xs">{benefit.desc}</div>
@@ -77,14 +77,14 @@ const HeroSection = () => {
         <div className="flex flex-col sm:flex-row gap-4 mb-12 lg:mb-16 max-w-2xl mx-auto">
           <button
             onClick={() => scrollToSection('properties')}
-            className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 lg:px-12 lg:py-5 rounded-2xl font-semibold text-lg lg:text-xl shadow-2xl hover:shadow-emerald-500/30 transition-all duration-300 transform hover:scale-105 border border-emerald-500/30"
+            className="bg-gradient-to-r from-violet-600 to-teal-600 hover:from-violet-700 hover:to-teal-700 text-white px-8 py-4 lg:px-12 lg:py-5 rounded-2xl font-semibold text-lg lg:text-xl shadow-2xl hover:shadow-violet-500/30 transition-all duration-300 transform hover:scale-105 border border-violet-500/30"
           >
             Explore Premium Properties
           </button>
           
           <button
             onClick={() => scrollToSection('contact')}
-            className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white hover:text-emerald-300 border-2 border-white/20 hover:border-emerald-400/50 px-8 py-4 lg:px-12 lg:py-5 rounded-2xl font-semibold text-lg lg:text-xl transition-all duration-300 transform hover:scale-105"
+            className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white hover:text-violet-300 border-2 border-white/20 hover:border-violet-400/50 px-8 py-4 lg:px-12 lg:py-5 rounded-2xl font-semibold text-lg lg:text-xl transition-all duration-300 transform hover:scale-105"
           >
             Book Free Consultation
           </button>
@@ -92,17 +92,17 @@ const HeroSection = () => {
 
         {/* Stats Highlights */}
         <div className="flex flex-wrap justify-center gap-8 lg:gap-12 text-sm lg:text-base mb-8">
-          <div className="flex items-center gap-2 text-emerald-400">
+          <div className="flex items-center gap-2 text-violet-400">
             <Star className="w-5 h-5" />
             <span className="font-semibold">₹50Cr+</span>
             <span className="text-gray-400">Properties Sold</span>
           </div>
-          <div className="flex items-center gap-2 text-emerald-400">
+          <div className="flex items-center gap-2 text-violet-400">
             <Award className="w-5 h-5" />
             <span className="font-semibold">1200+</span>
             <span className="text-gray-400">Happy Clients</span>
           </div>
-          <div className="flex items-center gap-2 text-emerald-400">
+          <div className="flex items-center gap-2 text-violet-400">
             <ShieldCheck className="w-5 h-5" />
             <span className="font-semibold">9+</span>
             <span className="text-gray-400">Years Experience</span>
@@ -114,7 +114,7 @@ const HeroSection = () => {
       {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10 animate-bounce">
         <button
           onClick={() => scrollToSection('about')}
-          className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:border-emerald-400/50 transition-colors duration-300 hover:bg-white/20"
+          className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:border-violet-400/50 transition-colors duration-300 hover:bg-white/20"
           aria-label="Scroll to About section"
         >
           <ChevronDown className="w-5 h-5 text-white" />
@@ -123,7 +123,7 @@ const HeroSection = () => {
       </div> */}
 
       {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 lg:w-48 lg:h-48 bg-emerald-500/5 rounded-full blur-xl border border-emerald-400/10 animate-pulse"></div>
+      <div className="absolute top-20 left-10 w-32 h-32 lg:w-48 lg:h-48 bg-violet-500/5 rounded-full blur-xl border border-violet-400/10 animate-pulse"></div>
       <div className="absolute bottom-32 right-10 w-24 h-24 lg:w-40 lg:h-40 bg-teal-500/5 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
     </section>
   );

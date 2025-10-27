@@ -48,8 +48,8 @@ const Navigation = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className={`font-medium transition-colors hover:text-emerald-600 px-3 py-2 rounded-lg ${
-                    isScrolled ? 'text-gray-700 hover:bg-emerald-50' : 'text-gray-700 hover:bg-emerald-50'
+                  className={`font-medium transition-colors hover:text-violet-600 px-3 py-2 rounded-lg ${
+                    isScrolled ? 'text-gray-700 hover:bg-violet-50' : 'text-gray-700 hover:bg-violet-50'
                   }`}
                 >
                   {item.name}
@@ -60,7 +60,7 @@ const Navigation = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
             <div className="hidden lg:flex items-center space-x-4">
               <button 
                 onClick={() => scrollToSection('#contact')}
-                className="bg-emerald-600 text-white px-6 py-3 rounded-full font-medium hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105"
+                className="bg-violet-600 text-white px-6 py-3 rounded-full font-medium hover:bg-violet-700 transition-all duration-300 transform hover:scale-105"
               >
                 Book Consultation
               </button>
@@ -89,7 +89,7 @@ const Navigation = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
         }`}>
           <div className="p-6 border-b border-gray-100">
             <div className="flex items-center space-x-3">
-              <Building2 className="w-10 h-10 text-emerald-600" />
+              <Building2 className="w-10 h-10 text-violet-600" />
               <span className="font-bold text-xl text-gray-900">Bunny & Co.</span>
             </div>
           </div>
@@ -98,14 +98,14 @@ const Navigation = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="w-full text-left px-4 py-4 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-xl transition-colors font-medium"
+                className="w-full text-left px-4 py-4 text-gray-700 hover:bg-violet-50 hover:text-violet-600 rounded-xl transition-colors font-medium"
               >
                 {item.name}
               </button>
             ))}
             <button 
               onClick={() => scrollToSection('#contact')}
-              className="w-full mt-6 bg-emerald-600 text-white px-4 py-4 rounded-xl font-medium hover:bg-emerald-700 transition-colors"
+              className="w-full mt-6 bg-violet-600 text-white px-4 py-4 rounded-xl font-medium hover:bg-violet-700 transition-colors"
             >
               Book Consultation
             </button>

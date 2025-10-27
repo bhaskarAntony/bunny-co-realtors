@@ -142,16 +142,16 @@ const GallerySection = () => {
   }, []);
 
   return (
-    <section id="gallery" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-emerald-50">
+    <section id="gallery" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-violet-50">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-16 lg:mb-20">
-          <div className="inline-flex items-center px-6 py-3 bg-emerald-100 rounded-full text-emerald-800 font-medium mb-8">
+          <div className="inline-flex items-center px-6 py-3 bg-violet-100 rounded-full text-violet-800 font-medium mb-8">
             Property Gallery
           </div>
           
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
             Explore Our
-            <span className="text-emerald-600"> Premium Properties</span>
+            <span className="text-violet-600"> Premium Properties</span>
           </h2>
           
           <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -192,7 +192,7 @@ const GallerySection = () => {
           <button
             onClick={prevSlide}
             disabled={currentIndex === 0}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-emerald-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-violet-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <ChevronLeft className="w-6 h-6 text-gray-600" />
           </button>
@@ -200,7 +200,7 @@ const GallerySection = () => {
           <button
             onClick={nextSlide}
             disabled={currentIndex >= galleryImages.length - 3}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-emerald-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-violet-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <ChevronRight className="w-6 h-6 text-gray-600" />
           </button>
@@ -275,7 +275,7 @@ const GallerySection = () => {
                 onClick={() => setCurrentIndex(index)}
                 className={`transition-all duration-300 rounded-full ${
                   index === currentIndex 
-                    ? 'bg-emerald-600 w-8 h-2' 
+                    ? 'bg-violet-600 w-8 h-2' 
                     : 'bg-gray-300 w-2 h-2'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}

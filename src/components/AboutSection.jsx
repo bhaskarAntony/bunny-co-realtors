@@ -10,7 +10,7 @@ const AboutSection = () => {
           {/* Left Content */}
           <div className="flex-1 space-y-8 lg:pr-12">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-100 rounded-full text-emerald-700 font-medium">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-violet-100 rounded-full text-violet-700 font-medium">
               <Zap className="w-5 h-5" />
               <span>About Bunny & Co.</span>
             </div>
@@ -19,7 +19,7 @@ const AboutSection = () => {
             <div>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
                 Building Trust in 
-                <span className="text-emerald-600 block">Every Property Deal</span>
+                <span className="text-violet-600 block">Every Property Deal</span>
               </h2>
               <p className="text-xl text-gray-600 mb-8">
                 Redefining Mumbai's real estate with transparency and excellence
@@ -29,7 +29,7 @@ const AboutSection = () => {
             {/* Content */}
             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
               <p>
-                At <strong className="text-emerald-600">Bunny & Co. Realtors</strong>, we specialize in premium residential and commercial spaces 
+                At <strong className="text-violet-600">Bunny & Co. Realtors</strong>, we specialize in premium residential and commercial spaces 
                 with <strong>zero brokerage on new projects</strong>.
               </p>
               <p>
@@ -46,9 +46,9 @@ const AboutSection = () => {
               ].map((item, index) => {
                 const IconComponent = item.icon;
                 return (
-                  <div key={index} className="flex items-start gap-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
-                    <div className="p-2 bg-emerald-100 rounded-lg">
-                      <IconComponent className="w-6 h-6 text-emerald-600" />
+                  <div key={index} className="flex items-start gap-4 p-6 bg-gray-50 rounded-xl hover:bg-violet-50 transition-colors">
+                    <div className="p-2 bg-violet-100 rounded-lg">
+                      <IconComponent className="w-6 h-6 text-violet-600" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">{item.title}</h4>
@@ -61,7 +61,7 @@ const AboutSection = () => {
 
             {/* CTA */}
             {/* <div className="flex gap-4">
-              <button className="bg-emerald-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-emerald-700 transition-colors">
+              <button className="bg-violet-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-violet-700 transition-colors">
                 Learn More
               </button>
               <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-xl font-semibold hover:bg-gray-50 transition-colors">
@@ -93,7 +93,7 @@ const AboutSection = () => {
             { number: "15+", label: "Years" }
           ].map((stat, index) => (
             <div key={index} className="text-center p-6 bg-gray-50 rounded-xl">
-              <div className="text-3xl font-bold text-emerald-600 mb-2">{stat.number}</div>
+              <div className="text-3xl font-bold text-violet-600 mb-2">{stat.number}</div>
               <div className="text-gray-600">{stat.label}</div>
             </div>
           ))}
