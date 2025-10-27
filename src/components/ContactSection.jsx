@@ -37,7 +37,8 @@ const ContactSection = () => {
       // Initialize EmailJS (you'll need to get these from EmailJS dashboard)
       emailjs.init("7ogPXMKfFPMLlyri8"); // Replace with your EmailJS public key
       const templateParams = {
-        to_email: 'bunnyandco.realtors@gmail.com',
+        // to_email: 'bunnyandco.realtors@gmail.com',
+        to_email: 'worke2339@gmail.com',
         from_name: formData.name,
         from_email: formData.email,
         phone: formData.phone,
