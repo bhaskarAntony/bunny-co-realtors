@@ -35,10 +35,10 @@ const ContactSection = () => {
     
     try {
       // Initialize EmailJS (you'll need to get these from EmailJS dashboard)
-      emailjs.init("7ogPXMKfFPMLlyri8"); // Replace with your EmailJS public key
+      emailjs.init("Wv_Xx_UceT6Vlzmy3"); // Replace with your EmailJS public key
       const templateParams = {
-        // to_email: 'bunnyandco.realtors@gmail.com',
-        to_email: 'worke2339@gmail.com',
+        to_email: 'bunnyandco.realtors@gmail.com',
+        // to_email: 'worke2339@gmail.com',
         from_name: formData.name,
         from_email: formData.email,
         phone: formData.phone,
@@ -48,8 +48,8 @@ const ContactSection = () => {
       };
 
       await emailjs.send(
-        'service_3krkqnm', // Replace with your EmailJS service ID
-        'template_vddatgd', // Replace with your EmailJS template ID
+        'service_b00pa7e', // Replace with your EmailJS service ID
+        'template_r8ds4mm', // Replace with your EmailJS template ID
         templateParams
       );
       
